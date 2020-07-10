@@ -1,7 +1,6 @@
 FROM node:14.4-alpine3.11
 WORKDIR /app
-ADD package*.json ./
+COPY . /app
 RUN npm install
-COPY . .
+CMD npm start
 EXPOSE 3000
-CMD ["npm", "start"]
